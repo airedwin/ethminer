@@ -1,6 +1,7 @@
 # Ethereum CUDA Miner
-Based on work by Anthony-Tatowicz https://github.com/Anthony-Tatowicz/docker-ethminer/
-Updated to use nvidia's cuda 9.0 docker image
+Based on work by Anthony-Tatowicz https://github.com/Anthony-Tatowicz/docker-ethminer/ \
+Updated to use nvidia's cuda 10.1 docker image\
+Updated to use ethmine 0.18.0
 
 ### Docker container for Ethereum mining with CUDA.
 
@@ -18,14 +19,10 @@ $ nvidia-docker run -it airedwin/ethminer ARG1 ARG2 ...
 
 # Example
 $ nvidia-docker run -it airedwin/ethminer \
--S us-west1.nanopool.org:9999 \
--O <your_wallet_address>.<worker_name>/<your_email>
+-P stratum://0x123456789@us1.ethermine.org:4444
 ```
 
 **Note:** `-U` is set by default
-
-**Note:** Be sure to change the -O argument to your mining address and email.  
-The format goes like this "address.worker/email"
 
 ### Help
 `$ etherminer --help`
